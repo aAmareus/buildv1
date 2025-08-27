@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: url("../img/bg.png");
+    background-size: fill;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.menubar {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    background: #ffffff27;
+    backdrop-filter: blur(3px);
+    position: sticky;
+    top: 0;
+}
+
+.menubar .logo-container img {
+    width: 40px;
+}
+
+.menubar .menu-items {
+    display: flex;
+    gap: 40px;
+}
+
+.menu-items .item {
+    color: #fff;
+    text-decoration: none;
+}
+
+.form-logo-container {
+    width: 60rem;
+    height: 600px;
+    padding: 20px;
+    border: 1px solid #ff0000;
+    margin-top: 200px;
+    display: flex;
+}
+
+.form-logo-container div {
+    width: calc(30rem - 10px);
+    height: auto;
+    padding: 30px;
+    border: 1px solid #ff0000;
+}
+
+.form-logo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.form-logo-container .form-container {
+    display: grid;
+    grid-template-columns: repeat(1, 4fr);
+    color: #fff;
+}
+
+.form-container .welcome {
+    width: 100%;
+    border: 1px solid #ff0000;
+
+}
