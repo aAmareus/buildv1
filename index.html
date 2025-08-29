@@ -19,7 +19,7 @@
     <!-- MENU DE NAVEGACION -->
     <nav class="menubar">
         <div class="logo-container">
-            <img src="assets/img/logo@W-wt.png" alt="" class="logo">
+            <img src="assets/img/logo@B-wt.png" alt="" class="logo">
         </div>
 
         <div class="menu-items">
@@ -32,11 +32,11 @@
     <!--  -->
     <div class="form-logo-container">
         <div class="logo-container">
-            <img src="/assets/img/logo@W.png" alt="">
+            <img src="/assets/img/logo@BN.png" alt="">
         </div>
         <div class="form-container">
             <h2 class="welcome">¡Inicia sesion colocando tus credenciales!</h2>
-            <form action="#" class="login-form">
+            <form class="login-form" id="form-login-user">
                 <input type="text" name="user" id="user-input" placeholder="Usuario" required>
                 <input type="password" name="pass" id="user-pass" placeholder="Contraseña" required>
 
@@ -44,11 +44,11 @@
                 <i class="fa-solid fa-eye toggle toggle-icon"></i>
 
                 <a href="#" class="redirect">
-                    <button>Entrar</button>
+                    <button id="catalog-redirect">Entrar</button>
                 </a>
             </form>
 
-            <span class="register-link">¿No tienes una cuenta? <a href="#">Crea una aquí</a></span>
+            <span class="register-link">¿No tienes una cuenta? <a href="#" id="register-redirect">Crea una aquí</a></span>
         </div>
     </div>
 
@@ -278,7 +278,7 @@
      </footer>
 
     <!-- Script for toggle password input to show the content -->
-    <script>
+    <script type="text/javascript">
         const toggle = document.querySelector('.toggle-input');
         const password = document.querySelector('#user-pass');
         const icon = document.querySelector('.toggle-icon');
@@ -294,6 +294,28 @@
                 icon.classList.add('fa-eye');
             }
         });
+
+
+        // Funciones para redirigir a páginas
+
+        // // --- Para usuario existente
+        // toCatalog = document.getElementById('catalog-redirect');
+
+        // toCatalog.addEventListener('click', function(e) {
+        //     e.preventDefault();
+        //     window.location.href = 'services/catalogo.html'
+        // })
+        
+        // --- Para registrar un nuevo usuario
+        toRegister = document.getElementById('register-redirect');
+        
+        toRegister.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.location.href = 'services/auth/register.html'
+        })
     </script>
+
+    <!-- Script for validate Login form -->
+     <script src="assets/js/validateUser.js"></script>
 </body>
 </html>

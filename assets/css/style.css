@@ -24,8 +24,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 5px 20px;
-    background: #ffffff27;
-    backdrop-filter: blur(3px);
+    background: #fff;
     position: sticky;
     top: 0;
     z-index: 10;
@@ -41,8 +40,9 @@ body {
 }
 
 .menu-items .item {
-    color: #fff;
+    color: #000;
     text-decoration: none;
+    cursor: not-allowed;
 }
 
 
@@ -54,8 +54,7 @@ body {
     /* border: 1px solid #ff0000; */
     margin-top: 200px;
     display: flex;
-    background: #ffffff27;
-    backdrop-filter: blur(3px);
+    background: #fff;
 }
 
 .form-logo-container div {
@@ -76,7 +75,7 @@ body {
 .form-logo-container .form-container {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    color: #fff;
+    color: #000;
 }
 
 .form-container .welcome {
@@ -100,14 +99,14 @@ body {
     background: none;
     outline: none;
     border: none;
-    color: #fff;
-    border-bottom: #dac191 2px solid;
+    color: #000;
+    border-bottom: #000 2px solid;
     transition: .5s;
 }
 
 .form-container .login-form #user-input:focus,
 .form-container .login-form #user-pass:focus {
-    border-bottom: #00ff00 2px solid;
+    border-bottom: #ffdb66 2px solid;
     transition: .5s;
 }
 
@@ -168,8 +167,12 @@ body {
 }
 
 .register-link a {
-    color: #fff;
+    color: #000;
     text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: 1px solid underline;
 }
 
 
@@ -180,7 +183,6 @@ body {
     margin-top: 300px;
     padding: 50px;
     background: #ffffff;
-    box-shadow: 0 -25px 10px 25px #ffffff;
     /* border: 1px solid #ff0000; */
 }
 
@@ -253,8 +255,8 @@ body {
 /* Footer styling */
 .footer-container {
     width: 100%;
-    background: #292929;
-    color: #fff;
+    background: #fff;
+    color: #000;
     padding: 30px 10px;
     display: flex;
     flex-wrap: wrap;
