@@ -6,3 +6,35 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
+
+.menubar {
+    border: 1px solid red;
+    height: 70px;
+    padding: 10px;
+}
+
+.item {
+    color: #000;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: .2s;
+}
+
+.item:hover {
+    color: #353535;
+    background: #f5f5f5;
+    transition: .2s;
+}
+
+.item-active {
+    color: #272727;
+    background: #f5f5f5;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.item-active:hover {
+    background: #cacaca;
+    transition: .2s;
+}
