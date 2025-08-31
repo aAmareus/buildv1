@@ -24,9 +24,9 @@
                 <img src="/assets/img/logo@B-wt.png" alt="">
             </div>
             <div class="menu-items col-md-4 text-center d-flex align-items-center justify-content-end gap-5">
-                <a href="index.html" class="item">Inicio</a>
+                <a href="../index.html" class="item">Inicio</a>
                 <a href="#" class="item item-active" aria-disabled="true">Catálogo</a>
-                <a href="#" class="item">Cuenta</a>
+                <a href="./auth/register.html" class="item">Cuenta</a>
             </div>
         </div>
 
@@ -39,38 +39,217 @@
                 <li class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button">Año</a>
                     <ul class="dropdown-menu">
-                        <li><a href="#" class="dropdown-item">2025</a></li>
-                        <li><a href="#" class="dropdown-item">2024</a></li>
-                        <li><a href="#" class="dropdown-item">2023</a></li>
-                        <li><a href="#" class="dropdown-item">2022</a></li>
-                        <li><a href="#" class="dropdown-item">2021</a></li>
-                        <li><a href="#" class="dropdown-item">2020</a></li>
-                        <li><a href="#" class="dropdown-item">2019</a></li>
+                        <li><a href="#" class="dropdown-item" id="src2025">2025</a></li>
+                        <li><a href="#" class="dropdown-item" id="src2024">2024</a></li>
+                        <li><a href="#" class="dropdown-item" id="src2023">2023</a></li>
+                        <li><a href="#" class="dropdown-item" id="src2022">2022</a></li>
+                        <li><a href="#" class="dropdown-item" id="src2021">2021</a></li>
+                        <li><a href="#" class="dropdown-item" id="src2020">2020</a></li>
+                        <li><a href="#" class="dropdown-item" id="src2019">2019</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
                     <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button">Tipo</a>
                     <ul class="dropdown-menu">
-                        <li><a href="#" class="dropdown-item">Libro</a></li>
-                        <li><a href="#" class="dropdown-item">Audio</a></li>
-                        <li><a href="#" class="dropdown-item">Blue Ray</a></li>
-                        <li><a href="#" class="dropdown-item">DVD</a></li>
+                        <li><a href="#" class="dropdown-item" id="filterBook">Libro</a></li>
+                        <li><a href="#" class="dropdown-item" id="filterAudio">Audio</a></li>
+                        <li><a href="#" class="dropdown-item" id="filterBluRay">Blue Ray</a></li>
+                        <li><a href="#" class="dropdown-item" id="filterDVD">DVD</a></li>
                     </ul>
                 </li>
             </ul>
         </div>
 
         <!-- Catalogo Ficticio -->
-        <div class="cat-container row row-cols-5 g-2">
+        <div class="cat-container row row-cols-5 g-2 w-100 my-5">
             <div class="card d-flex flex-column align-items-center gap-3 p-2">
                 <div class="img-thumbnail">
                     <img src="../assets/img/covers/cover300.jpg" alt="" class="img-thumbnail">
                 </div>
                 <div class="book-desc d-flex flex-column">
                     <ul class="desc-list list-group">
-                        <li class="list-gruop-item book author"><span><b>Autor/(es)</b> Kingsburg, Luke.</span></li>
-                        <li class="list-gruop-item book-title"><span><b>Título:</b> Lorem, ipsum dolor.</span></li>
-                        <li class="list-gruop-item book-type"><span><b>Tipo:</b> Libro</span></li>
+                        <li class="list-group-item book author"><span><b>Autor/(es)</b> Kingsburg, Luke.</span></li>
+                        <li class="list-group-item book-title"><span><b>Título:</b> Lorem, ipsum dolor.</span></li>
+                        <li class="list-group-item book-type"><span><b>Tipo:</b> Libro</span></li>
+                        <li class="list-group-item book-year"><span><b>Año: </b> 2025</span></li>
+                    </ul>
+                </div>
+
+                <div class="select-btn">
+                    <button class="btn">Detalles</button>
+                    <button class="btn btn-primary">Reservar</button>
+                </div>
+            </div>
+
+
+            <div class="card d-flex flex-column align-items-center gap-3 p-2">
+                <div class="img-thumbnail">
+                    <img src="../assets/img/covers/cover300.jpg" alt="" class="img-thumbnail">
+                </div>
+                <div class="book-desc d-flex flex-column">
+                    <ul class="desc-list list-group">
+                        <li class="list-group-item book author"><span><b>Autor/(es)</b> Kingsburg, Luke.</span></li>
+                        <li class="list-group-item book-title"><span><b>Título:</b> Lorem, ipsum dolor.</span></li>
+                        <li class="list-group-item book-type"><span><b>Tipo:</b> Libro</span></li>
+                        <li class="list-group-item book-year"><span><b>Año: </b> 2024</span></li>
+                    </ul>
+                </div>
+
+                <div class="select-btn">
+                    <button class="btn">Detalles</button>
+                    <button class="btn btn-primary">Reservar</button>
+                </div>
+            </div>
+
+
+            <div class="card d-flex flex-column align-items-center gap-3 p-2">
+                <div class="img-thumbnail">
+                    <img src="../assets/img/covers/cover300.jpg" alt="" class="img-thumbnail">
+                </div>
+                <div class="book-desc d-flex flex-column">
+                    <ul class="desc-list list-group">
+                        <li class="list-group-item book author"><span><b>Autor/(es)</b> Kingsburg, Luke.</span></li>
+                        <li class="list-group-item book-title"><span><b>Título:</b> Lorem, ipsum dolor.</span></li>
+                        <li class="list-group-item book-type"><span><b>Tipo:</b> Blue Ray</span></li>
+                        <li class="list-group-item book-year"><span><b>Año: </b> 2025</span></li>
+                    </ul>
+                </div>
+
+                <div class="select-btn">
+                    <button class="btn">Detalles</button>
+                    <button class="btn btn-primary">Reservar</button>
+                </div>
+            </div>
+
+
+            <div class="card d-flex flex-column align-items-center gap-3 p-2">
+                <div class="img-thumbnail">
+                    <img src="../assets/img/covers/cover300.jpg" alt="" class="img-thumbnail">
+                </div>
+                <div class="book-desc d-flex flex-column">
+                    <ul class="desc-list list-group">
+                        <li class="list-group-item book author"><span><b>Autor/(es)</b> Kingsburg, Luke.</span></li>
+                        <li class="list-group-item book-title"><span><b>Título:</b> Lorem, ipsum dolor.</span></li>
+                        <li class="list-group-item book-type"><span><b>Tipo:</b> Libro</span></li>
+                        <li class="list-group-item book-year"><span><b>Año: </b> 2025</span></li>
+                    </ul>
+                </div>
+
+                <div class="select-btn">
+                    <button class="btn">Detalles</button>
+                    <button class="btn btn-primary">Reservar</button>
+                </div>
+            </div>
+
+
+            <div class="card d-flex flex-column align-items-center gap-3 p-2">
+                <div class="img-thumbnail">
+                    <img src="../assets/img/covers/cover300.jpg" alt="" class="img-thumbnail">
+                </div>
+                <div class="book-desc d-flex flex-column">
+                    <ul class="desc-list list-group">
+                        <li class="list-group-item book author"><span><b>Autor/(es)</b> Kingsburg, Luke.</span></li>
+                        <li class="list-group-item book-title"><span><b>Título:</b> Lorem, ipsum dolor.</span></li>
+                        <li class="list-group-item book-type"><span><b>Tipo:</b> DVD</span></li>
+                        <li class="list-group-item book-year"><span><b>Año: </b> 2025</span></li>
+                    </ul>
+                </div>
+
+                <div class="select-btn">
+                    <button class="btn">Detalles</button>
+                    <button class="btn btn-primary">Reservar</button>
+                </div>
+            </div>
+
+
+            <div class="card d-flex flex-column align-items-center gap-3 p-2">
+                <div class="img-thumbnail">
+                    <img src="../assets/img/covers/cover300.jpg" alt="" class="img-thumbnail">
+                </div>
+                <div class="book-desc d-flex flex-column">
+                    <ul class="desc-list list-group">
+                        <li class="list-group-item book author"><span><b>Autor/(es)</b> Kingsburg, Luke.</span></li>
+                        <li class="list-group-item book-title"><span><b>Título:</b> Lorem, ipsum dolor.</span></li>
+                        <li class="list-group-item book-type"><span><b>Tipo:</b> Libro</span></li>
+                        <li class="list-group-item book-year"><span><b>Año: </b> 2025</span></li>
+                    </ul>
+                </div>
+
+                <div class="select-btn">
+                    <button class="btn">Detalles</button>
+                    <button class="btn btn-primary">Reservar</button>
+                </div>
+            </div>
+            <div class="card d-flex flex-column align-items-center gap-3 p-2">
+                <div class="img-thumbnail">
+                    <img src="../assets/img/covers/cover300.jpg" alt="" class="img-thumbnail">
+                </div>
+                <div class="book-desc d-flex flex-column">
+                    <ul class="desc-list list-group">
+                        <li class="list-group-item book author"><span><b>Autor/(es)</b> Kingsburg, Luke.</span></li>
+                        <li class="list-group-item book-title"><span><b>Título:</b> Lorem, ipsum dolor.</span></li>
+                        <li class="list-group-item book-type"><span><b>Tipo:</b> Audio</span></li>
+                        <li class="list-group-item book-year"><span><b>Año: </b> 2025</span></li>
+                    </ul>
+                </div>
+
+                <div class="select-btn">
+                    <button class="btn">Detalles</button>
+                    <button class="btn btn-primary">Reservar</button>
+                </div>
+            </div>
+
+
+            <div class="card d-flex flex-column align-items-center gap-3 p-2">
+                <div class="img-thumbnail">
+                    <img src="../assets/img/covers/cover300.jpg" alt="" class="img-thumbnail">
+                </div>
+                <div class="book-desc d-flex flex-column">
+                    <ul class="desc-list list-group">
+                        <li class="list-group-item book author"><span><b>Autor/(es)</b> Kingsburg, Luke.</span></li>
+                        <li class="list-group-item book-title"><span><b>Título:</b> Lorem, ipsum dolor.</span></li>
+                        <li class="list-group-item book-type"><span><b>Tipo:</b> DVD</span></li>
+                        <li class="list-group-item book-year"><span><b>Año: </b> 2025</span></li>
+                    </ul>
+                </div>
+
+                <div class="select-btn">
+                    <button class="btn">Detalles</button>
+                    <button class="btn btn-primary">Reservar</button>
+                </div>
+            </div>
+
+
+            <div class="card d-flex flex-column align-items-center gap-3 p-2">
+                <div class="img-thumbnail">
+                    <img src="../assets/img/covers/cover300.jpg" alt="" class="img-thumbnail">
+                </div>
+                <div class="book-desc d-flex flex-column">
+                    <ul class="desc-list list-group">
+                        <li class="list-group-item book author"><span><b>Autor/(es)</b> Kingsburg, Luke.</span></li>
+                        <li class="list-group-item book-title"><span><b>Título:</b> Lorem, ipsum dolor.</span></li>
+                        <li class="list-group-item book-type"><span><b>Tipo:</b> Blue Ray</span></li>
+                        <li class="list-group-item book-year"><span><b>Año: </b> 2025</span></li>
+                    </ul>
+                </div>
+
+                <div class="select-btn">
+                    <button class="btn">Detalles</button>
+                    <button class="btn btn-primary">Reservar</button>
+                </div>
+            </div>
+
+
+            <div class="card d-flex flex-column align-items-center gap-3 p-2">
+                <div class="img-thumbnail">
+                    <img src="../assets/img/covers/cover300.jpg" alt="" class="img-thumbnail">
+                </div>
+                <div class="book-desc d-flex flex-column">
+                    <ul class="desc-list list-group">
+                        <li class="list-group-item book author"><span><b>Autor/(es)</b> Kingsburg, Luke.</span></li>
+                        <li class="list-group-item book-title"><span><b>Título:</b> Lorem, ipsum dolor.</span></li>
+                        <li class="list-group-item book-type"><span><b>Tipo:</b> Blue Ray</span></li>
+                        <li class="list-group-item book-year"><span><b>Año: </b> 2025</span></li>
                     </ul>
                 </div>
 
@@ -81,6 +260,9 @@
             </div>
         </div>
 
+
+    <!-- Installing filter.js -->
+     <script src="../assets/js/filter.js"></script>
 
     <!-- Incorporing node modules -->
      <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

@@ -38,3 +38,11 @@
     background: #cacaca;
     transition: .2s;
 }
+
+
+@media (max-width: 768px) {
+    .menubar {
+        background: red;
+    }
+
+}
