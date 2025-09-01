@@ -8,7 +8,7 @@
 }
 
 .menubar {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     height: 70px;
     padding: 10px;
 }
@@ -39,6 +39,9 @@
     transition: .2s;
 }
 
+.card {
+    border:  none !important;
+}
 
 @media (max-width: 768px) {
     .menubar {

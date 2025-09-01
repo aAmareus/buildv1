@@ -1,0 +1,179 @@
+// Esperara que cargue todo el DOM
+document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll("'card");
+
+    // Estado actual de los filtros
+    let activeFilters = {
+        year: null,
+        type: null,
+        search: ""
+    }
+
+    // Aplicar los filtros
+    function applyFilters() {
+        cards.forEach(card => {
+            const cardYear = card.querySelector(".book-year").textContent.trim();
+            const cardType = card.querySelector('.book-type').textContent.trim();
+            const cardTitle = card.querySelector('.book-title').textContent.toLowerCase();
+
+            let match = true;
+
+            // Filtrar por año
+            if (activeFilters.year && !cardYear.includes(activeFilters.year)) {
+                match = false;
+            }
+
+            // Filtrar por tipo
+            if (activeFilters.type && !cardType.includes(activeFilters.year)) {
+                match = false;
+            }
+
+            // Filtrar por búsqueda
+            if (activeFilters.search && !cardTitle.includes(activeFilters.search)) {
+                match = false;
+            }
+
+            card.style.display = match ? 'flex' : 'none !important';
+        });
+    }
+
+    // --- Filtro por año ---
+    document.querySelectorAll("dropdown.menu .dropdown-item[id^='src']").forEach(item => {
+        item.addEventListener('click', e => {
+            e.preventDefault();
+            activeFilters.year = item.textContent.trim();
+            applyFilters();
+        })
+    });
+
+    // --- Filtro por tipo ---
+    document.querySelectorAll('#filterBook, #filterAudio, #filterBluRay, #filterDVD').forEach(item => {
+        item.addEventListener('click', e => {
+            e.preventDefault();
+            activeFilters.type = item.textContent.trim();
+            applyFilters();
+        })
+    })
+
+
+    // --- Filtrar por búsqueda ---
+    document.querySelector('#book-title-finder').addEventListener('keyup', e => {
+        activeFilters.search = e.target.value.toLowerCase();
+        applyFilters();
+    })
+});
+
+
+
+****************************************************************************************************************
+
+
+// ../assets/js/filter.js
+document.addEventListener('DOMContentLoaded', () => {
+  const DEBUG = false; // pon true para ver logs en consola
+  const cards = Array.from(document.querySelectorAll('.cat-container .card'));
+
+  // Normaliza: quita acentos, pasa a minúsculas y limpia etiquetas tipo "Título:" / "Tipo:"
+  const normalizeText = (s = '') =>
+    s
+      .toString()
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '') // quita diacríticos
+      .replace(/.*t[ií]tulo:\s*/i, '') // quita "Título:"
+      .replace(/.*tipo:\s*/i, '') // quita "Tipo:"
+      .replace(/.*a[oó]o:\s*/i, '') // quita "Año:"
+      .replace(/\s+/g, ' ')
+      .trim();
+
+  // Indexar / guardar en dataset los valores que usaremos para filtrar
+  cards.forEach((card) => {
+    const yearText = card.querySelector('.book-year')?.textContent || '';
+    const year = (yearText.match(/\b(19|20)\d{2}\b/) || [])[0] || '';
+
+    const typeText = card.querySelector('.book-type')?.textContent || '';
+    let type = normalizeText(typeText).replace(/\s+/g, '');
+    if (type.startsWith('blu')) type = 'bluray'; // normaliza variantes "blue ray", "blu ray", "blue"
+
+    const titleText = normalizeText(card.querySelector('.book-title')?.textContent || '');
+
+    card.dataset.year = year;
+    card.dataset.type = type;
+    card.dataset.title = titleText;
+
+    if (DEBUG) console.log('indexed card ->', { titleText, year, type });
+  });
+
+  // Estado de filtros acumulativos
+  const state = { year: '', type: '', q: '' };
+
+  // Aplica los filtros (acumulativos)
+  function apply() {
+    const q = state.q;
+    cards.forEach((card) => {
+      let ok = true;
+      if (state.year && card.dataset.year !== state.year) ok = false;
+      if (state.type && card.dataset.type !== state.type) ok = false;
+      if (q && !card.dataset.title.includes(q)) ok = false;
+      // Mostrar con display vacío (deja que las clases CSS manejen el layout) o esconder con none
+      card.style.display = ok ? '' : 'none';
+    });
+
+    if (DEBUG) {
+      console.log('state', state);
+      console.log('visible count', cards.filter(c => c.style.display !== 'none').length);
+    }
+  }
+
+  // --- Filtrar por año (ids: src2025, src2024, ...) ---
+  document.querySelectorAll('.dropdown-menu .dropdown-item[id^="src"]').forEach((item) => {
+    item.addEventListener('click', (e) => {
+      e.preventDefault();
+      const year = item.id.replace('src', '');
+      // toggle: si clickeas el mismo año lo quita
+      state.year = state.year === year ? '' : year;
+      apply();
+    });
+  });
+
+  // --- Filtrar por tipo (ids: filterBook, filterAudio, filterBluRay, filterDVD) ---
+  const typeMap = {
+    filterBook: 'libro',
+    filterAudio: 'audio',
+    filterBluRay: 'bluray',
+    filterDVD: 'dvd',
+  };
+
+  Object.keys(typeMap).forEach((id) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.addEventListener('click', (e) => {
+      e.preventDefault();
+      const t = typeMap[id];
+      state.type = state.type === t ? '' : t; // toggle
+      apply();
+    });
+  });
+
+  // --- Búsqueda por título (input id="book-title-finder") ---
+  const input = document.getElementById('book-title-finder');
+  if (input) {
+    input.addEventListener('input', (e) => {
+      state.q = normalizeText(e.target.value);
+      apply();
+    });
+  }
+
+  // --- Reset (si agregas un botón con id="resetFilters") ---
+  document.getElementById('resetFilters')?.addEventListener('click', (e) => {
+    e?.preventDefault();
+    state.year = '';
+    state.type = '';
+    state.q = '';
+    if (input) input.value = '';
+    apply();
+  });
+
+  // Primera aplicación (por si hay valores iniciales)
+  apply();
+});
