@@ -43,6 +43,26 @@
     border:  none !important;
 }
 
+/* Reglas específicas para filtrado con máxima especificidad */
+.cat-container .row .col .card.filtered-hidden,
+.cat-container .card.filtered-hidden,
+.cat-container .card.filtered-hidden,
+.card.filtered-hidden {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    position: absolute !important;
+    left: -9999px !important;
+    top: -9999px !important;
+    z-index: -9999 !important;
+    pointer-events: none !important;
+}
+
 @media (max-width: 768px) {
     .menubar {
         background: red;
