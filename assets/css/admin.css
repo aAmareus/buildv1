@@ -1,0 +1,32 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.item {
+    text-decoration: none !important;
+}
+
+.container {
+    border: 1px solid red;
+}
+
+.title {
+    width: 100%;
+    border: 1px solid red;
+}
+
+.title-table {
+    background: #fff;
+    border: 1px solid red;
+    width: fit-content;
+}
+
+.costumer-container, 
+.current-reservations {
+    height: 400px;
+    border: 1px solid red;
+    overflow-y: auto !important;
+}
