@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Linking CSS located at ../assets/css/catalogo-style.css -->
-    <link rel="stylesheet" href="../../assets/css/catalogo-style.css"
+    <link rel="stylesheet" href="../../assets/css/catalogo-style.css">
 
 
     <!-- Importing Bootstrap CDN -->
@@ -73,13 +73,6 @@
         </ul>
     </div>
 
-    <!-- Botón  flotante Shopping Cart-->
-    <!-- <div class="mb-3">
-            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#cart-modal">
-                <i class="fa-solid fa-cart-shopping"></i> <span id="cart-count" class="badge bg-danger cart-counter">0</span>
-            </button>
-        </div> -->
-
     <!-- Catalogo Ficticio -->
     <div class="cat-container row row-cols-5 g-2 w-100 my-5">
         <div class="card d-flex flex-column align-items-center gap-3 p-2">
@@ -144,7 +137,7 @@
 
         <div class="card d-flex flex-column align-items-center gap-3 p-2">
             <div class="img-thumbnail">
-                <img src="../assets/img/covers/cover300.jpg" alt="" class="img-thumbnail">
+                <img src="../assets/img/covers/cover312.jpg" alt="" class="img-thumbnail">
             </div>
             <div class="book-desc d-flex flex-column">
                 <ul class="desc-list list-group">
@@ -299,6 +292,17 @@
         </div>
     </div>
 
+    <!-- Modal del resumen -->
+     <div id="resumen-box" class="p-4 d-none justify-content-center align-items-center">
+        <div class="d-flex justify-content-between align-items-center mb-2 box-content flex-wrap p-3">
+            <div class="header d-flex justify-content-between w-100">
+                <h4 class="mb-0" id="resumen-titulo">Titulo del Libro</h4>
+            <button class="btn-close" aria-label="Cerrar" onclick="cerrarResumen()"></button>
+            </div>
+            <p id="resumen-texto">Aquí ira el resumen del libro seleccionado</p>
+        </div>
+     </div>
+
 
     <!-- Redirect to reservas.html -->
     <script>
@@ -307,6 +311,39 @@
         redirect.addEventListener('click', (e) => {
             e.preventDefault();
             window.location.href = 'reservas.html'
+        })
+
+
+
+        // Abrir el resumen del libro
+        const resumeBox = document.getElementById('resumen-box');
+        const resumeTitulo = document.getElementById('resumen-titulo');
+        const resumeTexto = document.getElementById('resumen-texto');
+
+        const resumen = {
+            'Lorem, ipsum dolor.': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, aliquam ducimus! Eaque cumque quod delectus necessitatibus cupiditate maiores temporibus ex ut quis? Consequatur esse rem, iste autem dolore temporibus quibusdam tenetur ipsa. Iste velit quae corrupti quas repudiandae facilis rerum placeat repellendus! Eveniet porro iusto nisi aliquid? Optio totam error earum molestias veritatis perferendis praesentium, labore tempora, facere deleniti excepturi. Sunt sit laudantium, necessitatibus, vero, veritatis nihil rerum vel voluptate accusamus minus repellat ipsa fugit deleniti architecto fuga eveniet eaque. Itaque quae, laudantium voluptatum eaque nesciunt saepe eos cupiditate deserunt!'
+        }
+
+        function mostrarResumen(titulo) {
+            resumeTitulo.textContent = titulo;
+            resumeTexto.textContent = resumen[titulo] || "Resumen no disponible para este título.";
+            resumeBox.classList.remove('d-none');
+            resumeBox.classList.add('d-flex');
+            resumeBox.scrollIntoView({behavior: "smooth"});
+        }
+
+        function cerrarResumen() {
+            resumeBox.classList.add('d-none');
+            resumeBox.classList.remove('d-flex');
+        }
+
+        // Seleccionar todos los botones 'detalles'
+        document.querySelectorAll('.select-btn .btn:first-child').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const tituloElemento = this.closest(".card").querySelector('.book-title span').innerText;
+                const titulo = tituloElemento.replace("Título:", "").trim();
+                mostrarResumen(titulo);
+            })
         })
     </script>
 

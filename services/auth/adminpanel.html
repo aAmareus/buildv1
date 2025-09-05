@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,208 +17,600 @@
 
     <title>Panel Administración | Biblioteca Municipal</title>
 </head>
+
 <body>
     <!-- Manu de navegación -->
     <div class="menubar w-100 d-flex align-items-center position-sticky p-2">
-        
+
         <!-- Logo del menú -->
         <div class="col-md-8 img-container d-flex align-items-center">
             <img src="../../assets/img/logo@B-wt.png" alt="">
         </div>
 
         <!-- Items de navegación -->
-         <div class="menu-items col-md-4 text-center d-flex align-items-center justify-content-end gap-5">
-            <a href="../../index.html" class="item">Inicio</a>
-            <a href="#" class="item">Catálogo</a>
-            <a href="#" class="item">Cuenta</a>
-         </div>
+        <div class="menu-items col-md-4 text-center d-flex align-items-center justify-content-end gap-5">
+            <a href="../../index.html" class="item text-decoration-none">Inicio</a>
+            <a href="../catalogo.html" class="item text-decoration-none">Catálogo</a>
+            <a href="#" class="item text-decoration-none">Cuenta</a>
+        </div>
     </div>
 
-    <div class="container d-flex flex-wrap justify-content-center align-items-center p-3 w-100 gap-3">
+    <div class="container d-flex flex-wrap justify-content-start align-items-center p-3 w-100 gap-3">
         <h2 class="title">Panel de administración</h2>
-        
-        <div class="costumer-container">
-            <h5 class="position-fixed title-table">Registro de Clientes</h5>
-            <table class="table align-middle mt-5">
+
+        <!-- Selección de menú a mostrar -->
+        <nav class="menu-tags">
+            <ul class="nav border-bottom">
+                <li class="nav-item">
+                    <button class="nav-link" id="btn-clientes">Clientes</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" id="btn-reservas">Reservas</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" id="btn-catalogo">Catálogo</button>
+                </li>
+                <li class="nav-item align-self-center">
+                    <input type="text" placeholder="Buscar" class="search">
+                </li>
+            </ul>
+        </nav>
+
+
+        <!--  Menúes  -->
+        <!-- --- Clientes --- -->
+        <div class="container-clientes active-page">
+            <table class="table table-hover">
                 <thead>
                     <tr class="table-primary">
+                        <th scope="col">ID</th>
                         <th scope="col">Nombre</th>
                         <th scope="col">Apellido</th>
-                        <th scope="col">Correo</th>
-                        <th scope="col">Editar</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Modificar</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="col">
-                        <th>Amaro</th>
-                        <th>González</th>
-                        <th>gonzalezamareus@gmail.com</th>
-                        <th>
+                    <tr class="align-middle">
+                        <th scope="row">234612</th>
+                        <td>Amaro</td>
+                        <td>González</td>
+                        <td>amareus@proton.me</td>
+                        <td>
                             <button class="btn btn-primary">
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </button>
-                            
                             <button class="btn btn-danger">
                                 <i class="fa-solid fa-trash"></i>
                             </button>
-                        </th>
+                        </td>
                     </tr>
-                    <tr class="col">
-                        <th>Amaro</th>
-                        <th>González</th>
-                        <th>gonzalezamareus@gmail.com</th>
-                        <th>
+                    <tr class="align-middle">
+                        <th scope="row">234612</th>
+                        <td>Amaro</td>
+                        <td>González</td>
+                        <td>amareus@proton.me</td>
+                        <td>
                             <button class="btn btn-primary">
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </button>
-                            
                             <button class="btn btn-danger">
                                 <i class="fa-solid fa-trash"></i>
                             </button>
-                        </th>
+                        </td>
                     </tr>
-                    <tr class="col">
-                        <th>Amaro</th>
-                        <th>González</th>
-                        <th>gonzalezamareus@gmail.com</th>
-                        <th>
+                    <tr class="align-middle">
+                        <th scope="row">234612</th>
+                        <td>Amaro</td>
+                        <td>González</td>
+                        <td>amareus@proton.me</td>
+                        <td>
                             <button class="btn btn-primary">
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </button>
-                            
                             <button class="btn btn-danger">
                                 <i class="fa-solid fa-trash"></i>
                             </button>
-                        </th>
+                        </td>
                     </tr>
-                    <tr class="col">
-                        <th>Amaro</th>
-                        <th>González</th>
-                        <th>gonzalezamareus@gmail.com</th>
-                        <th>
+                    <tr class="align-middle">
+                        <th scope="row">234612</th>
+                        <td>Amaro</td>
+                        <td>González</td>
+                        <td>amareus@proton.me</td>
+                        <td>
                             <button class="btn btn-primary">
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </button>
-                            
                             <button class="btn btn-danger">
                                 <i class="fa-solid fa-trash"></i>
                             </button>
-                        </th>
+                        </td>
                     </tr>
-                    <tr class="col">
-                        <th>Amaro</th>
-                        <th>González</th>
-                        <th>gonzalezamareus@gmail.com</th>
-                        <th>
+                    <tr class="align-middle">
+                        <th scope="row">234612</th>
+                        <td>Amaro</td>
+                        <td>González</td>
+                        <td>amareus@proton.me</td>
+                        <td>
                             <button class="btn btn-primary">
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </button>
-                            
                             <button class="btn btn-danger">
                                 <i class="fa-solid fa-trash"></i>
                             </button>
-                        </th>
+                        </td>
                     </tr>
-                    <tr class="col">
-                        <th>Amaro</th>
-                        <th>González</th>
-                        <th>gonzalezamareus@gmail.com</th>
-                        <th>
+                    <tr class="align-middle">
+                        <th scope="row">234612</th>
+                        <td>Amaro</td>
+                        <td>González</td>
+                        <td>amareus@proton.me</td>
+                        <td>
                             <button class="btn btn-primary">
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </button>
-                            
                             <button class="btn btn-danger">
                                 <i class="fa-solid fa-trash"></i>
                             </button>
-                        </th>
+                        </td>
                     </tr>
-                    <tr class="col">
-                        <th>Amaro</th>
-                        <th>González</th>
-                        <th>gonzalezamareus@gmail.com</th>
-                        <th>
+                    <tr class="align-middle">
+                        <th scope="row">234612</th>
+                        <td>Amaro</td>
+                        <td>González</td>
+                        <td>amareus@proton.me</td>
+                        <td>
                             <button class="btn btn-primary">
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </button>
-                            
                             <button class="btn btn-danger">
                                 <i class="fa-solid fa-trash"></i>
                             </button>
-                        </th>
+                        </td>
+                    </tr>
+                    <tr class="align-middle">
+                        <th scope="row">234612</th>
+                        <td>Amaro</td>
+                        <td>González</td>
+                        <td>amareus@proton.me</td>
+                        <td>
+                            <button class="btn btn-primary">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </button>
+                            <button class="btn btn-danger">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr class="align-middle">
+                        <th scope="row">234612</th>
+                        <td>Amaro</td>
+                        <td>González</td>
+                        <td>amareus@proton.me</td>
+                        <td>
+                            <button class="btn btn-primary">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </button>
+                            <button class="btn btn-danger">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr class="align-middle">
+                        <th scope="row">234612</th>
+                        <td>Amaro</td>
+                        <td>González</td>
+                        <td>amareus@proton.me</td>
+                        <td>
+                            <button class="btn btn-primary">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </button>
+                            <button class="btn btn-danger">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                        </td>
                     </tr>
                 </tbody>
             </table>
         </div>
-        <div class="current-reservations">
-            <h5 class="position-fixed title-table w-25">Reservas actuales</h5>
-            <table class="table align-middle mt-5">
+
+        <!-- --- Reservas --- -->
+        <div class="container-reservas">
+            <table class="table table-hover">
                 <thead>
-                    <tr class="col table-primary">
+                    <tr class="table-primary">
                         <th scope="col">ID</th>
                         <th scope="col">Cliente</th>
-                        <th scope="col">Inicio</th>
-                        <th scope="col">Fecha entrega</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Fecha inicio</th>
+                        <th scope="col">Fecha termino</th>
+                        <th scope="col">Info</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="col">
-                        <th>00123</th>
-                        <th>Jhonny Deep</th>
-                        <th>20/04/2025</th>
-                        <th>20/06/2005</th>
+                    <tr class="align-middle">
+                        <th scope="row">93848</th>
+                        <td>Amaro González</td>
+                        <td>amareus@proton.me</td>
+                        <td>07/11/2025</td>
+                        <td>07/12/2025</td>
+                        <td>
+                            <button class="btn btn-outline-success">
+                                <i class="fa-solid fa-info"></i>
+                            </button>
+                            <button class="btn btn-outline-dark">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </button>
+                        </td>
                     </tr>
-                    <tr class="col">
-                        <th>00123</th>
-                        <th>Jhonny Deep</th>
-                        <th>20/04/2025</th>
-                        <th>20/06/2005</th>
+                    <tr class="align-middle">
+                        <th scope="row">93848</th>
+                        <td>Amaro González</td>
+                        <td>amareus@proton.me</td>
+                        <td>07/11/2025</td>
+                        <td>07/12/2025</td>
+                        <td>
+                            <button class="btn btn-outline-success">
+                                <i class="fa-solid fa-info"></i>
+                            </button>
+                            <button class="btn btn-outline-dark">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </button>
+                        </td>
                     </tr>
-                    <tr class="col">
-                        <th>00123</th>
-                        <th>Jhonny Deep</th>
-                        <th>20/04/2025</th>
-                        <th>20/06/2005</th>
+                    <tr class="align-middle">
+                        <th scope="row">93848</th>
+                        <td>Amaro González</td>
+                        <td>amareus@proton.me</td>
+                        <td>07/11/2025</td>
+                        <td>07/12/2025</td>
+                        <td>
+                            <button class="btn btn-outline-success">
+                                <i class="fa-solid fa-info"></i>
+                            </button>
+                            <button class="btn btn-outline-dark">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </button>
+                        </td>
                     </tr>
-                    <tr class="col">
-                        <th>00123</th>
-                        <th>Jhonny Deep</th>
-                        <th>20/04/2025</th>
-                        <th>20/06/2005</th>
+                    <tr class="align-middle">
+                        <th scope="row">93848</th>
+                        <td>Amaro González</td>
+                        <td>amareus@proton.me</td>
+                        <td>07/11/2025</td>
+                        <td>07/12/2025</td>
+                        <td>
+                            <button class="btn btn-outline-success">
+                                <i class="fa-solid fa-info"></i>
+                            </button>
+                            <button class="btn btn-outline-dark">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </button>
+                        </td>
                     </tr>
-                    <tr class="col">
-                        <th>15447</th>
-                        <th>Jhonny Deep</th>
-                        <th>20/04/2025</th>
-                        <th>20/06/2005</th>
+                    <tr class="align-middle">
+                        <th scope="row">93848</th>
+                        <td>Amaro González</td>
+                        <td>amareus@proton.me</td>
+                        <td>07/11/2025</td>
+                        <td>07/12/2025</td>
+                        <td>
+                            <button class="btn btn-outline-success">
+                                <i class="fa-solid fa-info"></i>
+                            </button>
+                            <button class="btn btn-outline-dark">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </button>
+                        </td>
                     </tr>
-                    <tr class="col">
-                        <th>00124</th>
-                        <th>Jhonny Deep</th>
-                        <th>20/04/2025</th>
-                        <th>20/06/2005</th>
+                    <tr class="align-middle">
+                        <th scope="row">93848</th>
+                        <td>Amaro González</td>
+                        <td>amareus@proton.me</td>
+                        <td>07/11/2025</td>
+                        <td>07/12/2025</td>
+                        <td>
+                            <button class="btn btn-outline-success">
+                                <i class="fa-solid fa-info"></i>
+                            </button>
+                            <button class="btn btn-outline-dark">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </button>
+                        </td>
                     </tr>
-                    <tr class="col">
-                        <th>00154</th>
-                        <th>Jhonny Deep</th>
-                        <th>20/04/2025</th>
-                        <th>20/06/2005</th>
+                    <tr class="align-middle">
+                        <th scope="row">93848</th>
+                        <td>Amaro González</td>
+                        <td>amareus@proton.me</td>
+                        <td>07/11/2025</td>
+                        <td>07/12/2025</td>
+                        <td>
+                            <button class="btn btn-outline-success">
+                                <i class="fa-solid fa-info"></i>
+                            </button>
+                            <button class="btn btn-outline-dark">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </button>
+                        </td>
                     </tr>
-                    <tr class="col">
-                        <th>00668</th>
-                        <th>Jhonny Deep</th>
-                        <th>20/04/2025</th>
-                        <th>20/06/2005</th>
+                    <tr class="align-middle">
+                        <th scope="row">93848</th>
+                        <td>Amaro González</td>
+                        <td>amareus@proton.me</td>
+                        <td>07/11/2025</td>
+                        <td>07/12/2025</td>
+                        <td>
+                            <button class="btn btn-outline-success">
+                                <i class="fa-solid fa-info"></i>
+                            </button>
+                            <button class="btn btn-outline-dark">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </button>
+                        </td>
                     </tr>
-                    <tr class="col">
-                        <th>00668</th>
-                        <th>Jhonny Deep</th>
-                        <th>20/04/2025</th>
-                        <th>20/06/2005</th>
+                    <tr class="align-middle">
+                        <th scope="row">93848</th>
+                        <td>Amaro González</td>
+                        <td>amareus@proton.me</td>
+                        <td>07/11/2025</td>
+                        <td>07/12/2025</td>
+                        <td>
+                            <button class="btn btn-outline-success">
+                                <i class="fa-solid fa-info"></i>
+                            </button>
+                            <button class="btn btn-outline-dark">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr class="align-middle">
+                        <th scope="row">93848</th>
+                        <td>Amaro González</td>
+                        <td>amareus@proton.me</td>
+                        <td>07/11/2025</td>
+                        <td>07/12/2025</td>
+                        <td>
+                            <button class="btn btn-outline-success">
+                                <i class="fa-solid fa-info"></i>
+                            </button>
+                            <button class="btn btn-outline-dark">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </button>
+                        </td>
                     </tr>
                 </tbody>
             </table>
         </div>
+
+        <!-- --- Catalogo --- -->
+         <div class="container-catalogo">
+            <table class="table table-hover">
+                <thead>
+                    <tr class="table-primary">
+                        <th scope="col">Título</th>
+                        <th scope="col">Autor</th>
+                        <th scope="col">Tipo</th>
+                        <th scope="col">ID</th>
+                        <th scope="col">Editar</th>
+                        <th scope="col">Disponibilidad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr scope="row">
+                        <th>Harry Potter</th>
+                        <td>J. K Rowling</td>
+                        <td>[Tipo]</td>
+                        <td>HP11044</td>
+                        <td>
+                            <button class="btn btn-outline-primary">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </button>
+
+                            <button class="btn btn-outline-danger">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                        </td>
+                        <td><i class="fa-solid fa-check"></i></td>
+                    </tr>
+                    <tr scope="row">
+                        <th>El principito</th>
+                        <td>Antoine de Saint-Exupéry</td>
+                        <td>[Tipo]</td>
+                        <td>TP11064</td>
+                        <td>
+                            <button class="btn btn-outline-primary">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </button>
+
+                            <button class="btn btn-outline-danger">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                        </td>
+                        <td><i class="fa-solid fa-check"></i></td>
+                    </tr>
+                    <tr scope="row">
+                        <th>Harry Potter</th>
+                        <td>J. K Rowling</td>
+                        <td>[Tipo]</td>
+                        <td>HP11044</td>
+                        <td>
+                            <button class="btn btn-outline-primary">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </button>
+
+                            <button class="btn btn-outline-danger">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                        </td>
+                        <td><i class="fa-solid fa-check"></i></td>
+                    </tr>
+                    <tr scope="row">
+                        <th>El principito</th>
+                        <td>Antoine de Saint-Exupéry</td>
+                        <td>[Tipo]</td>
+                        <td>TP11064</td>
+                        <td>
+                            <button class="btn btn-outline-primary">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </button>
+
+                            <button class="btn btn-outline-danger">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                        </td>
+                        <td><i class="fa-solid fa-check"></i></td>
+                    </tr>
+                    <tr scope="row">
+                        <th>Harry Potter</th>
+                        <td>J. K Rowling</td>
+                        <td>[Tipo]</td>
+                        <td>HP11044</td>
+                        <td>
+                            <button class="btn btn-outline-primary">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </button>
+
+                            <button class="btn btn-outline-danger">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                        </td>
+                        <td><i class="fa-solid fa-check"></i></td>
+                    </tr>
+                    <tr scope="row">
+                        <th>El principito</th>
+                        <td>Antoine de Saint-Exupéry</td>
+                        <td>[Tipo]</td>
+                        <td>TP11064</td>
+                        <td>
+                            <button class="btn btn-outline-primary">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </button>
+
+                            <button class="btn btn-outline-danger">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                        </td>
+                        <td><i class="fa-solid fa-check"></i></td>
+                    </tr>
+                    <tr scope="row">
+                        <th>Harry Potter</th>
+                        <td>J. K Rowling</td>
+                        <td>[Tipo]</td>
+                        <td>HP11044</td>
+                        <td>
+                            <button class="btn btn-outline-primary">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </button>
+
+                            <button class="btn btn-outline-danger">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                        </td>
+                        <td><i class="fa-solid fa-check"></i></td>
+                    </tr>
+                    <tr scope="row">
+                        <th>El principito</th>
+                        <td>Antoine de Saint-Exupéry</td>
+                        <td>[Tipo]</td>
+                        <td>TP11064</td>
+                        <td>
+                            <button class="btn btn-outline-primary">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </button>
+
+                            <button class="btn btn-outline-danger">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                        </td>
+                        <td><i class="fa-solid fa-check"></i></td>
+                    </tr>
+                    <tr scope="row">
+                        <th>Harry Potter</th>
+                        <td>J. K Rowling</td>
+                        <td>[Tipo]</td>
+                        <td>HP11044</td>
+                        <td>
+                            <button class="btn btn-outline-primary">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </button>
+
+                            <button class="btn btn-outline-danger">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                        </td>
+                        <td><i class="fa-solid fa-check"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="buttons">
+                <button class="btn btn-outline-dark">
+                    Editar Catálogo
+                </button>
+
+            </div>
+         </div>
+
+
+        <!-- - Pagination - -->
+        <nav>
+            <ul class="pagination">
+                <li class="page-item">
+                    <a href="#" class="page-link" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li class="page-item"><a href="#" class="page-link">1</a></li>
+                <li class="page-item"><a href="#" class="page-link">2</a></li>
+                <li class="page-item"><a href="#" class="page-link">3</a></li>
+                <li class="page-item">
+                    <a href="#" class="page-link" aria-label="Previous">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
     </div>
+
+    <script type="text/javascript">
+        // Seleccionar containers
+        const showClients = document.querySelector('.container-clientes');
+        const showReservas = document.querySelector('.container-reservas');
+        const showCatalogo = document.querySelector('.container-catalogo');
+
+        // Seleccionar botones
+        const btnClients = document.querySelector('#btn-clientes');
+        const btnReservas = document.querySelector('#btn-reservas');
+        const btnCatalog = document.querySelector('#btn-catalogo');
+
+
+        function hideSections() {
+            showClients.style.display = 'none'
+            showReservas.style.display = 'none'
+            showCatalogo.style.display = 'none'
+        }
+
+        // Mostrar clientes por defecto
+        hideSections();
+        showClients.style.display = 'block'
+
+        // Eventos
+        btnClients.addEventListener('click', () => {
+            hideSections();
+            showClients.style.display = 'block';
+        });
+
+        btnReservas.addEventListener('click', () => {
+            hideSections();
+            showReservas.style.display = 'block';
+        });
+
+        btnCatalog.addEventListener('click', () => {
+            hideSections();
+            showCatalogo.style.display = 'block';
+        });
+    </script>
 </body>
+
 </html>

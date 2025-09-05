@@ -63,9 +63,74 @@
     pointer-events: none !important;
 }
 
+#resumen-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw !important;
+    height: 100vh !important;
+    z-index: 100;
+    background: #ffffff59;
+    backdrop-filter: blur(5px);
+}
+
+.box-content {
+    width: 50%;
+    height: 50%;
+    background: #fff;
+    border: 1px solid #353535;
+}
+
+/* ------------------ Media Query para tabletas (max 768px) ------------------ */
 @media (max-width: 768px) {
-    .menubar {
-        background: red;
+
+    .filter-container div {
+        width: 100%;
     }
 
+    /* Ajustes para el catálogo de libros */
+    .cat-container {
+        gap: 30px;
+        justify-content: center;
+    }
+
+    .cat-container .card {
+        width: 200px; /* Ancho un poco más pequeño para que quepan 2 en fila */
+    }
+
+    .cat-container .card .cover-book {
+        width: 100%;
+        height: auto;
+    }
 }
+
+/* ------------------ Media Query para móviles (max 480px) ------------------ */
+@media (max-width: 480px) {
+    /* Ajustes para la barra de navegación */
+    .menubar {
+        flex-direction: column; /* Apila el logo y los ítems del menú */
+        height: auto;
+        padding-top: 10px;
+    }
+
+    .menubar .menu-items {
+        flex-direction: column; /* Los ítems del menú se apilan */
+        gap: 10px;
+        padding-bottom: 10px;
+    }
+
+    /* Ajustes para el formulario */
+    .filter-container {
+        flex-direction: row; /* Se asegura de que se apile en móviles */
+    }
+
+    /* Ajustes para el catálogo de libros */
+    .cat-container .card {
+        width: 80%; /* Las tarjetas ocupan la mayoría del ancho de la pantalla */
+        margin-left: 30px;
+    }
+
+    .cat-container {
+        padding: 20px;
+    }
+} 

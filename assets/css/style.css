@@ -267,3 +267,70 @@ body {
     width: 100%;
     text-align: center;
 }
+
+/* ------------------ Media Query para tabletas (max 768px) ------------------ */
+@media (max-width: 768px) {
+    /* Ajustes para el formulario de login y el logo */
+    .form-logo-container {
+        width: 50%; /* El contenedor ahora ocupa el 50% del ancho */
+        flex-direction: column; /* Apila el logo y el formulario */
+        height: auto;
+        margin-top: 50px;
+    }
+
+    .form-logo-container div {
+        width: 100%;
+    }
+
+    /* Ajustes para el catálogo de libros */
+    .catalogo {
+        gap: 30px;
+        justify-content: center;
+    }
+
+    .catalogo .card {
+        width: 200px; /* Ancho un poco más pequeño para que quepan 2 en fila */
+    }
+
+    .catalogo .card .cover-book {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* ------------------ Media Query para móviles (max 480px) ------------------ */
+@media (max-width: 480px) {
+    /* Ajustes para la barra de navegación */
+    .menubar {
+        flex-direction: column; /* Apila el logo y los ítems del menú */
+        height: auto;
+        padding-top: 10px;
+    }
+
+    .menubar .menu-items {
+        flex-direction: column; /* Los ítems del menú se apilan */
+        gap: 10px;
+        padding-bottom: 10px;
+    }
+
+    /* Ajustes para el formulario */
+    .form-logo-container {
+        width: 87%; /* El contenedor ahora ocupa el 87% del ancho */
+        flex-direction: column; /* Apila el logo y el formulario */
+        height: auto;
+        margin-top: 50px;
+    }
+
+    .login-form .toggle {
+        margin-left: 280px; /* Ajusta la posición del ojo para pantallas más pequeñas */
+    }
+
+    /* Ajustes para el catálogo de libros */
+    .catalogo .card {
+        width: 80%; /* Las tarjetas ocupan la mayoría del ancho de la pantalla */
+    }
+
+    .catalogue-container {
+        padding: 20px;
+    }
+}

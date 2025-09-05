@@ -3,30 +3,38 @@
     margin: 0;
     box-sizing: border-box;
 }
-
-
-.item {
-    text-decoration: none !important;
+body {
+    height: 100vh;
 }
 
 .container {
-    border: 1px solid red;
+    border: 1px solid #757575;
+    border-radius: 10px;
+    max-height: 1000px !important;
 }
 
 .title {
     width: 100%;
-    border: 1px solid red;
 }
 
-.title-table {
-    background: #fff;
-    border: 1px solid red;
-    width: fit-content;
+.menu-tags {
+    width: 100% !important;
 }
 
-.costumer-container, 
-.current-reservations {
-    height: 400px;
-    border: 1px solid red;
-    overflow-y: auto !important;
+.container-clientes,
+.container-reservas,
+.container-catalogo {
+    width: 100% ;
+    overflow-y: auto;
+}
+
+.table {
+    max-height: 500px;
+}
+
+.search {
+    padding: 0 5px;
+    border: none;
+    border-bottom: .5px solid #757575;
+    outline: none;
 }
