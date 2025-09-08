@@ -8,7 +8,31 @@
 }
 
 body {
+    background: url("../img/bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: start center;
+    display: flex;
+    flex-direction: column;
+    gap: 200px;
+    align-items: center;
     width: 100vw;
     height: 100vh;
-    background: #e9e9e9;
+}
+
+.menubar {
+    background: #fff;
+}
+
+.menubar div a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.register-form-container {
+    border: 1px solid red;
+}
+
+form h3 {
+    color: #000;
 }

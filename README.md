@@ -23,3 +23,9 @@ catalogo.html:
         + Menu bar
         + Carrito
         + Catálogo
+
+adminpanel.html:
+    - Podrás ver el como administrador e interactuar con el ambiente de la bibliteca desde los pies de un trabajador.
+        + Viendo la cantidad de usuarios existentes.
+        + Viendo la cantidad de reservas actuales.
+        + Viendo el catálogo actual, con la posibilidad de modificarlo.

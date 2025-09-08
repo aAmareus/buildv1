@@ -1,17 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Linking CSS located at ../../assets/css/register-style.css -->
+    <!-- Link css -->
     <link rel="stylesheet" href="../../assets/css/register-style.css">
 
-    <!-- Setting favicon -->
-     <link rel="shortcut icon" href="../../assets/img/favicon.ico" type="image/x-icon">
-    <title>Registro Biblioteca Municipal</title>
+    <!-- Importing Bootstrap CDN -->
+    <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/fa3517100f.js" crossorigin="anonymous"></script>
+
+    <link rel="shortcut icon" href="../../assets/img/favicon.ico" type="image/x-icon">
+
+    <title>Crea tu cuenta! - Biblioteca Municipal</title>
 </head>
+
 <body>
-    <div class="register-form-container"></div>
+    <!-- Header menu -->
+    <div class="menubar w-100 d-flex align-items-center p-2">
+        <div class="col-md-8 img-container">
+            <img src="../../assets/img/logo@B-wt.png" alt="">
+        </div>
+        <div class="menu-items col-md-4 text-center d-flex align-items-center justify-content-end gap-5">
+            <a href="../../index.html" class="item">Inicio</a>
+            <a href="../catalogo.html" class="item">Catálogo</a>
+            <a href="../reservas.html" class="item">Cuenta</a>
+        </div>
+    </div>
+
+    <div class="register-form-container col-md-4 p-3">
+        <form action="" class="row g-3">
+            <div class="col-md-12">
+                <h3>¡Crea tu cuenta!</h3>
+            </div>
+            <div class="col-md-6">
+                <input type="text" class="form-control" placeholder="Nombre">
+            </div>
+            <div class="col-md-6">
+                <input type="text" class="form-control" placeholder="Apellido">
+            </div>
+            <div class="col-md-6">
+                <input type="text" class="form-control" placeholder="Teléfono">
+            </div>
+            <div class="col-md-6">
+                <input type="text" class="form-control" placeholder="Identificación">
+            </div>
+            <div class="col-md-12">
+                <input type="text" class="form-control" placeholder="Correo Electrónico">
+            </div>
+        </form>
+
+
+        <!-- 
+        
+            POR TERMINAR - VALIDAR - ESTILIZAR
+        
+        
+        
+        -->
+    </div>
+
 </body>
+
 </html>
