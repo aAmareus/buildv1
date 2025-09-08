@@ -1,9 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
     
     // Estableciendo credenciales locales para testear el código
-    user = 'admin'
-    pass = 'adminpass123'
+    admin = 'admin'
+    adminpass = 'adminpass123'
 
+    user = 'user'
+    userpass = '$userpass'
     // Localizando el formulario de iniciar sesión
     const loginUser = document.getElementById('form-login-user');
     const userInput = document.getElementById('user-input');
@@ -16,8 +18,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     loginUser.addEventListener('submit', function(e) {
         e.preventDefault();
-        if (userInput.value === user && passInput.value === pass) {
+        if (userInput.value === user && passInput.value === userpass) {
             window.location.href = 'services/catalogo.html'
+        } else if (userInput.value === admin && passInput.value === adminpass){
+            window.location.href = 'services/auth/adminpanel.html'
         } else {
             alert('Usuario y/o contraseña incorrectos, vuelva a intentar.\n(Intenta con Usuario: admin - Contraseña: adminpass123 )');
             clearInputs();

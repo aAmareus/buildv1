@@ -28,9 +28,9 @@
             <img src="../../assets/img/logo@B-wt.png" alt="">
         </div>
         <div class="menu-items col-md-4 text-center d-flex align-items-center justify-content-end gap-5">
-            <a href="../../index.html" class="item">Inicio</a>
-            <a href="../catalogo.html" class="item">Catálogo</a>
-            <a href="../reservas.html" class="item">Cuenta</a>
+            <a href="../../index.html" class="item" style="color: #000 !important;">Inicio</a>
+            <a href="../catalogo.html" class="item" style="color: #000 !important;">Catálogo</a>
+            <a href="../reservas.html" class="item" style="color: #000 !important;">Cuenta</a>
         </div>
     </div>
 
@@ -46,7 +46,7 @@
                 <input type="text" class="form-control" placeholder="Apellido">
             </div>
             <div class="col-md-6">
-                <input type="text" class="form-control" placeholder="Teléfono">
+                <input type="tel" class="form-control" placeholder="Teléfono">
             </div>
             <div class="col-md-6">
                 <input type="text" class="form-control" placeholder="Identificación">
@@ -54,18 +54,29 @@
             <div class="col-md-12">
                 <input type="text" class="form-control" placeholder="Correo Electrónico">
             </div>
+            <div class="col-md-12">
+                <input type="password" class="form-control" placeholder="Contraseña">
+            </div>
+            <div class="col-md-12">
+                <input type="password" class="form-control" placeholder="Repetir contraseña">
+            </div>
+            <div class="col-md-12">
+                <button id="reg-user">Registrarse</button>
+            </div>
+            <div class="col-md-12">
+                <span class="redirect-login">¿Ya tienes una cuenta? <a href="../../index.html" style="color: #000 !important; text-decoration: none;">Inicia sesión</a></span>
+            </div>
         </form>
-
-
-        <!-- 
-        
-            POR TERMINAR - VALIDAR - ESTILIZAR
-        
-        
-        
-        -->
     </div>
 
+    <script type="text/javascript">
+        const mybtn = document.getElementById('reg-user');
+
+        mybtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.location.href = '../reservas.html'
+        })
+    </script>
 </body>
 
 </html>

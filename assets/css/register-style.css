@@ -14,9 +14,9 @@ body {
     background-position: start center;
     display: flex;
     flex-direction: column;
-    gap: 200px;
+    gap: 100px;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
 }
 
@@ -30,9 +30,60 @@ body {
 }
 
 .register-form-container {
-    border: 1px solid red;
+    /* border: 1px solid red; */
+    background: #fff;
+    border-radius: 14px;
 }
 
 form h3 {
     color: #000;
 }
+
+.register-form-container input {
+    border-radius: 0 !important;
+    border: none !important;
+    border-bottom: 2px solid #000 !important;
+    transition: .5s;
+}
+
+.register-form-container input:focus {
+    border-bottom: #ffdb66 2px solid !important;
+    transition: .5s;
+}
+
+/* Styling button */
+#reg-user {
+    padding: 10px 50px;
+    background: #fff;
+    border: 1px solid #000;
+}
+
+#reg-user::before {
+    content: 'Registrarse';
+    position: absolute;
+    background: #000;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px 50px;
+    margin-left: -51px;
+    margin-top: -11px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: .2s;
+    pointer-events: none;
+}
+
+#reg-user:hover::before {
+    transform: scaleX(1);
+    transition: .2s;
+}
+
+.redirect-login {
+    color: #000;
+    font-size: 14px;
+}
+
+.redirect-login a:hover {
+    text-decoration: 1px #000 underline solid !important;
+}
+
